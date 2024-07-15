@@ -1,0 +1,290 @@
+
+<html>  
+<head>  
+<script type="text/javascript" src="app.js">
+    </script>  
+<link rel="stylesheet" href="styles.css">
+<script src="https://d3js.org/d3.v7.min.js"></script>
+</head>
+<body onload=final()> 
+<div>
+<h2 class="section">Nobel Prize Trends</h2>
+<br>
+
+
+<div>
+    <h2>Introduction</h2>
+<p style="font-family: Arial">
+    Alfred Nobel was a Swedish scientist and industrialist; he was most well-known for inventing dynamite. 
+        When he died in 1896, he bequeathed all his assets to be used for the establishment of five prizes 
+        in the fields of Physics, Chemistry, Physiology (now known as Medicine), Literature, and Peace. 
+        The first Nobel prizes were awarded in 1901 and a sixth prize for Economics was added in 1968. 
+        While the process of deciding a winner differs slightly for each category, a large chunk of the 
+        decision-making happens within the Nobel Committee.
+        This dashboard explores various trends among Nobel prize
+        winners, especially surrounding the number of winners over
+        time, the gender of the winners, and the countries that the winners are from. 
+        This dashboard utilizes data spanning 
+        from 1901 to 2022.</p>
+
+
+
+<div id="intro">
+    </div>
+    <h4> 
+        </h4>
+    <div id="intro_plot" class="center_plot">
+    </div><br>
+</div>    
+</div>
+
+
+
+<div>
+    <div id="p5_plot" class="center_plot"></div>
+    <h2>Number of Nobel Prize Winners per Year: 
+         </h2>
+
+        <p style="font-family: Arial">
+            How much variation has there been in the number of Nobel
+        Prize winners per year?  </p>
+    <div id="p5">
+        <p style="font-family: Arial">
+            The box plot makes it clear that there is not
+                much difference between the statistics for male winners and overall winners.
+                In fact, the medians of these groups are the same, and the first and third quartile are
+                very close as well. On the other hand, female winners have decidedly different statistics.
+                Most notably, the majority of the data is at the bottom. Since the first to third quartile is 
+                concentrated between 0 and 1, it is clear that there
+                were only 0 or 1 female winners most years. This means that most winners are men and women 
+                are not well represented. </p>
+            <p style="font-family: Arial">
+                Here, blue is used to represent male winners
+                and red is used to represent female winners. These are socially common colors 
+                for the genders so they are easy for the viewer to understand. 
+                Additionally, this lends itself well to using purple for the 
+                overall statistics since red and blue mixed together make purple. 
+                The marks in this visualization are lines; the channels are height. </p>
+        
+        </div>
+        
+    </div>    
+    </div> 
+
+
+<div>
+    <div id="p1_plot" class="center_plot"></div><br>
+    <h2>Male vs Female Nobel Prize Winners per Year: 
+         </h2>
+
+        <p style="font-family: Arial">
+            What is the comparison between the number of male winners
+        each year and the number of female winners each
+        year? The line shows the case where the number of female winners 
+        is equal to the number of male winners. Hover over a point 
+        to see its exact values, along with each year the data is from.  </p>
+
+    <div id="p1">
+        </div>
+        <p style="font-family: Arial">
+            The line shows the case where the number of female winners 
+        is equal to the number of male winners; this never occurred. There was also
+        no year with only female winners, but there were many years with only male 
+        winners. It is clear that most winners are men, and very few (if any) of the 
+        winners each year are female. </p>
+            <p style="font-family: Arial">
+                Since blue was previously used to represent male winners and 
+            red to represent female winners, purple is used here for 
+            overall statistics because red and blue mixed together makes purple. 
+            The marks in this visualization are points; the channels are horizontal and vertical position.
+            Here, the x and y axis are not scaled separately; this makes the comparison between male and 
+            female winners more clear to the viewer. It is clear that the 
+            majority of the points are clustered near the bottom; 
+            this is because there are more male winners than female winners. 
+            This would not have been as apparent if the x and y axis were 
+            scaled separately. </p>
+
+            
+    </div>    
+    </div>
+    
+
+ <div>
+    <div id="p2_plot" class="center_plot"></div><br>
+
+        <div id="radio_p2" class="center_plot">
+            <input type="radio" id="q2_MCD" name="setting" value="Overall" checked="checked">
+            <label for="Overall">Overall</label>
+            <input type="radio" id="q3_BK" name="setting" value="Male">
+            <label for="Male">Male</label>
+            <input type="radio" id="q3_W" name="setting" value="Female">
+            <label for="Female">Female</label>
+        </div>
+    <h2>Number of Nobel Prize Winners Over Time: 
+        </h2>
+
+        <p style="font-family: Arial">
+            The number of winners could fluctuate every year due to ties, group
+        work, or new awards being added. Has there been a
+        trend in the number of Nobel Prize winners over time? 
+        Toggle the buttons below to see the overall trends, as well as trends 
+        for female winners and male winners.
+        Hover over a point to see its exact values, 
+        along with which year the data is from.  </p>
+
+    <div id="p2">
+        </div>
+        <p style="font-family: Arial">
+            Overall, there has been an increase in the number of winners per year;
+            there is a slight upward trend. The years 1940-1942 did not have any winners; the Nobel prize was not
+            awarded in these years due to WWII.
+            There is also an increase for male winners,
+            although it is not as defined. For female winners, there is no real trend. 
+            There are usually either 0 or 1 female winners each year with a few notable
+            spikes here and there. There is still a large discrepancy between the number of 
+            female winners and male winners, but it is worth noting that these spikes are more recent
+            (2004, 2009, 2011, 2018, 2020); perhaps this is evidence that the Nobel Committee 
+            is moving toward equality. </p>
+        
+            <p style="font-family: Arial">
+                Once again, blue is used to represent male winners
+                and red to represent female winners. Purple is used for  
+                overall statistics since red and blue mixed together make purple. 
+                The marks in this visualization are points; the channels are
+                horizontal and vertical position, and color. </p>    
+        
+        
+    </div>    
+    </div> 
+   
+    <div id="p3_plot" class="center_plot"></div><br>
+    <h2>Nobel Prize Winners per Category per Year:
+    </h2>
+
+    <p style="font-family: Arial">
+        How many winners are there per category per year?
+        The years with no winners (1940-1942) are excluded in this visualization.
+        Hover over a bar to see its exact value.  </p>
+
+    <div id="p3">
+        </div>
+        <p style="font-family: Arial">
+            In the visualization, it can be seen that Physics and Medicine make up a big chunk of the winners, 
+            especially since the late 1960s. This visualization also shows the introduction of Economics,
+            which also contributed a large number of winners in recent years. Each year, these three categories 
+            make up a large proportion of the winners. </p> 
+
+            <p style="font-family: Arial">
+                Here, d3 schemeAccent is used in order to give
+                each category its own distinguishable color while still looking 
+                aesthetically coherent in the stacked bar chart. 
+                The marks in this visualization are lines; the channels
+                are horizontal and vertical position, and color.
+                The years that had no winners were omitted because there were 
+                already a lot of years to show and the visualization was getting overwhelming. </p> 
+        
+    </div>    
+    </div> 
+
+
+    <div>
+        <div id="p6_plot" class="center_plot"></div><br>
+        <h2>Nobel Prize Winners per Category: </h2>
+
+        <p style="font-family: Arial">
+            How many Nobel Prize winners are there in each category?  </p>
+
+        <div id="p5">
+            </div>
+            <p style="font-family: Arial">
+                This visualization makes it clear that Physics has the most winners, followed closely by Medicine. 
+                Chemistry is third. This is reasonable since advancements in science are rarely done individually so 
+                the prize is often given to a group as opposed to a single person. On the other hand, winners of Peace or 
+                Literature usually work alone so there are less winners in these categories.
+                Economics has the least winners, which is expected since it was introduced much later than the other categories. </p>
+            
+                <p style="font-family: Arial">
+                    This visualization utitlizes the same color scheme as the previous visualization for 
+                continuity purposes since both are about the different categories of Nobel Prizes.
+                The marks in this visualization are points; the channels are horizontal and vertical position.
+                The visualization is horizontal because there are only a few categories and each category 
+                has many winners. </p>
+                     
+            
+        </div>    
+        </div> 
+
+    <div>
+
+    <div>
+        <div id="p4_plot" class="center_plot"></div><br>
+    <h2>Number of Nobel Prize Winners per Country: 
+        </h2>
+
+        <p style="font-family: Arial">
+            How many Nobel Prize winners are from each country?
+        Hover on a country for its exact value.
+        Click on the map to zoom or pan.  </p>
+
+    <div id="p4">
+        </div>
+        <p style="font-family: Arial">
+            This map shows that the vast majority of winners are from America. 
+            France and Germany are the closest competitors.
+            There are many countries with no winners, especially in South America and Africa.
+            America's absolute dominance is somewhat schocking, especially since Nobel was Swedish.
+            While other countries may be struggling from a lack of resources, Europe's poor showing is 
+            rather unexpected. </p>
+
+            <p style="font-family: Arial">
+                Since blue was previously used to represent male winners and 
+            red to represent female winners, purple is used here for 
+            overall statistics because red and blue mixed together makes purple.
+            The marks in this visualization are area; the channels are color. </p>
+       
+        
+    </div>    
+    </div> 
+
+
+    <div>
+        <h2>Conclusion</h2>
+        <div id="intro">
+            </div>
+            <p style="font-family: Arial">
+                This dashboard has revealed a lot of information about Nobel prize winners. 
+            For example, Physics, Medicine, and Chemistry 
+            have the most winners. Economics has the least winners overall because it was added later,
+            but it makes up a healthy proportion of annual winners. </p>
+
+            <p style="font-family: Arial">
+                While there has been some progress toward awarding more women, 
+            the vast majority of Nobel prize winners are men. This is an issue that needs to be addressed, 
+            since it represents a vicious downward spiral. When young girls do not see themselves being represented 
+            in awards like this, they lose conviction to work in these fields. This leads to a lack of women in these fields, 
+            which is a loss for the whole world. These women could contribute so much to the development of these fields if 
+            they were properly encouraged and inspired. 
+            If young girls saw women winning the Nobel Prize, they would be inspired to work in those fields. 
+            This, in turn, would lead to more talented women working in these fields and winning these prizes in the future. 
+            Winners such as Marie Curie and Malala Yousafzai have been invaluable role models to young girls around the world; 
+            their impact cannot be overstated. The Nobel Committee should aim to award more women moving forward, because currently 
+            women make up a very measly percentage of the winners. </p>
+
+            <p style="font-family: Arial">
+                Additionally, a majority of the Nobel Prize winners 
+            are American, with a much smaller percentage being European. This is something that the Nobel Committee 
+            should be more minfdul of in the future. It would be interesting if the committee began some outreach programs 
+            in order to solicit projects from a wider variety of countries. A major goal of the Nobel Prize is to recognize 
+            talent from around the world, but it does not seem like this goal is being met currently since most of the winners 
+            are from the same few countries. Gaining representation from more countries would definitely help bring new 
+            perspectives to the table and would lead to new developments in all the Nobel fields.  </p>
+
+
+            <div id="intro_plot" class="center_plot">
+            </div><br>
+        </div>    
+        </div>
+    
+   
+</body>  
+</html>  
